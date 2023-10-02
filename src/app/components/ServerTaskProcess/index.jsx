@@ -14,7 +14,7 @@ export default function ServerTaskProcess() {
 
         console.log(process.env.NEXT_PUBLIC_BACK_END_URL)  
 
-        const promise = axios.get(`${process.env.NEXT_PUBLIC_BACK_END_URL}/logs/LEME/GFS`, config);
+        const promise = axios.get(`http://146.235.45.255:5000/logs/LEME/GFS`, config);
         
         promise.then(res => {
             setTaskList(res.data);
