@@ -13,7 +13,7 @@ export default function DatesList({setTaskList}) {
             },
           }; 
 
-        const promise = axios.get(`http://localhost:5000/dates`, config);
+        const promise = axios.get(`http://146.235.45.255:5000/logs/dates`, config);
         
         promise.then(res => {
             setDateList(res.data);
@@ -36,7 +36,7 @@ export default function DatesList({setTaskList}) {
             
 
             console.log(formatedDate);
-            const promise = axios.get(`http://localhost:5000/logs/LEME/GFS/${formatedDate}`, config);
+            const promise = axios.get(`http://146.235.45.255:5000/logs/LEME/GFS/${formatedDate}`, config);
             
             promise.then(res => {
                 setTaskList(res.data)
