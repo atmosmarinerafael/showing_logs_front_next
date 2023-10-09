@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
-import { BoxProcess, ContainerTasks, ServerComponentStyles, TaskTag } from "./styles";
+import { BoxProcess, ContainerTasks, ContainerTitleAndDate, ServerComponentStyles, TaskTag } from "./styles";
 import axios from "axios";
+import DatesList from "../DatesList";
 
 export default function ServerTaskProcess() {
     const [taskList, setTaskList] = useState(undefined);
@@ -24,7 +25,11 @@ export default function ServerTaskProcess() {
     }, [])
 
     return (<ServerComponentStyles>
-        <h1>LEME - GFS</h1>
+        <ContainerTitleAndDate>
+            <h1>LEME - GFS</h1>
+            <DatesList setTaskList={setTaskList}/>
+        </ContainerTitleAndDate>
+        
         <ContainerTasks>
             {taskList?.map( task => 
             <TaskTag key={task._id}>

@@ -19,6 +19,13 @@ export const ServerComponentStyles = styled.div`
     }
 ` 
 
+export const ContainerTitleAndDate = styled.div`
+    width: 60vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+`
+
 export const ContainerTasks = styled.div`
     display: flex;
     flex-wrap: wrap;
