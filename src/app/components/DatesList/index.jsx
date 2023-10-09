@@ -4,7 +4,6 @@ import axios from "axios";
 export default function DatesList({setTaskList}) {
     const [dateList, setDateList] = useState(undefined);
     const [selectedDate, setSelectedDate] = useState(undefined);
-    const [date, setDate] = useState(undefined);
 
     useEffect(() => {
         const config = {

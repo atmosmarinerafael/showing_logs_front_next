@@ -36,8 +36,15 @@ export default function ServerTaskProcess() {
                 <BoxProcess color={task.status === "start" ? "#024D94" : "#F10D82"}>
                     <p>Processo:</p>
                     <span>{task.process}</span>
-                    <p>Status:</p>
-                    <span>{task.status}</span>
+                    <div>
+                        <p>Status: </p>
+                        <span>{task.status}</span>
+                    </div>
+                    <div>
+                        <p>Horário: </p>
+                        <span>{task.createdAt[1]}</span>
+                    </div>
+                    
                 </BoxProcess>
             </TaskTag>)}
         </ContainerTasks>

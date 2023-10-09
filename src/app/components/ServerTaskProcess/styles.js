@@ -45,8 +45,8 @@ export const TaskTag = styled.div`
 `
 
 export const BoxProcess = styled.div`
-    height: 5rem;
-    width: 10rem;
+    height: 7rem;
+    width: 14rem;
     background-color: ${props => props.color};
     display: flex;
     flex-direction: column;
@@ -60,6 +60,12 @@ export const BoxProcess = styled.div`
     }
 
     span {
-        font-size: 12px;
+        margin-left: 3px;
+    }
+
+    div {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
     }
 `
