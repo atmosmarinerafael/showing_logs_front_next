@@ -1,14 +1,14 @@
 "use client"
 
 import Header from "./components/Header";
-import ServerTaskProcess from "./components/ServerTaskProcess";
+import TabsSystem from "./components/TabsSystem";
 
 
 export default function Home() {
   return (
     <>
       <Header />
-      <ServerTaskProcess />
+      <TabsSystem />
     </>
   )
 }

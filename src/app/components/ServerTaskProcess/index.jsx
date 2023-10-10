@@ -3,8 +3,10 @@ import { BoxProcess, ContainerTasks, ContainerTitleAndDate, ServerComponentStyle
 import axios from "axios";
 import DatesList from "../DatesList";
 
-export default function ServerTaskProcess() {
+export default function ServerTaskProcess( {server} ) {
     const [taskList, setTaskList] = useState(undefined);
+
+    console.log(server)
 
     useEffect(() => {
         const config = {
@@ -15,18 +17,18 @@ export default function ServerTaskProcess() {
 
         console.log(process.env.NEXT_PUBLIC_BACK_END_URL)  
 
-        const promise = axios.get(`http://146.235.45.255:5000/logs/LEME/GFS`, config);
+        const promise = axios.get(`http://146.235.45.255:5000/logs/${server}/GFS`, config);
         
         promise.then(res => {
             setTaskList(res.data);
         });
         
         promise.catch(err => console.log(err.response.data));
-    }, [])
+    }, [server])
 
     return (<ServerComponentStyles>
         <ContainerTitleAndDate>
-            <h1>LEME - GFS</h1>
+            <h1>{server} - GFS</h1>
             <DatesList setTaskList={setTaskList}/>
         </ContainerTitleAndDate>
         
